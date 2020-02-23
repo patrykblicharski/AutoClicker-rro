@@ -118,5 +118,17 @@ namespace Autoclickerro.Properties {
                 this["SelectHotKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ButonSelSave {
+            get {
+                return ((int)(this["ButonSelSave"]));
+            }
+            set {
+                this["ButonSelSave"] = value;
+            }
+        }
     }
 }

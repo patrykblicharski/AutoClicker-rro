@@ -26,5 +26,8 @@
     <Setting Name="SelectHotKey" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">114</Value>
     </Setting>
+    <Setting Name="ButonSelSave" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

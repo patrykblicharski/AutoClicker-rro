@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Autoclickerro.Classes;
 using Autoclickerro.Properties;
 
 //icon by Freepik
@@ -42,6 +43,9 @@ namespace Autoclickerro
             public uint type;
             public MOUSEINPUT mi;
         };
+
+        private bool intervalDivider;
+
 
         [DllImport("User32.dll", SetLastError = true)]
         public static extern int SendInput(int nInputs, ref INPUT pInputs, int cbSize);
@@ -234,6 +238,8 @@ namespace Autoclickerro
                 try
                 {
                     timerinterv = Convert.ToInt32(intervalText.Text);
+
+
                 }
                 catch
                 {
@@ -426,6 +432,28 @@ namespace Autoclickerro
         private void btnStop_Click(object sender, EventArgs e)
         {
             stop();
+        }
+
+        private void fMain_Load(object sender, EventArgs e)
+        {
+            List<string> lista = new List<string>();
+
+
+            var a = Properties.Settings.Default.Ustawienie;
+            var b = a.Count;
+            //var b = a["SelectHotKey"];
+            //label8.Text = b.PropertyValue.ToString();
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

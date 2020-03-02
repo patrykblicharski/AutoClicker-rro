@@ -49,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\aClicker.cs" />
+    <Compile Include="Classes\aHothey.cs" />
+    <Compile Include="Classes\ClickerBase.cs" />
+    <Compile Include="Classes\test1.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

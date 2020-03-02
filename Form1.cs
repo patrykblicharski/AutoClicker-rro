@@ -76,11 +76,12 @@ namespace Autoclickerro
             {
                 selectbuttonCombo.SelectedIndex = 0;
             }
+            
 
             //Try to SET combo box index last selected type of click to use
             try
             {
-                clicktypeCombo.SelectedIndex = Settings.Default.ClickTypeSave;
+                clicktypeCombo.SelectedIndex = 0; //debug
             }
             catch
             {

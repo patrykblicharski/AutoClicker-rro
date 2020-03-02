@@ -49,18 +49,6 @@ namespace Autoclickerro.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int ClickTypeSave {
-            get {
-                return ((int)(this["ClickTypeSave"]));
-            }
-            set {
-                this["ClickTypeSave"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool CursorFixedSave {
             get {
@@ -128,6 +116,18 @@ namespace Autoclickerro.Properties {
             }
             set {
                 this["ButonSelSave"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ClickTypeSave {
+            get {
+                return ((int)(this["ClickTypeSave"]));
+            }
+            set {
+                this["ClickTypeSave"] = value;
             }
         }
     }

@@ -43,6 +43,8 @@ namespace Autoclickerro
             public MOUSEINPUT mi;
         };
 
+        private bool intervalDivider;
+
         [DllImport("User32.dll", SetLastError = true)]
         public static extern int SendInput(int nInputs, ref INPUT pInputs, int cbSize);
         [DllImport("user32.dll")]
@@ -235,6 +237,8 @@ namespace Autoclickerro
                 try
                 {
                     timerinterv = Convert.ToInt32(intervalText.Text);
+                    if (intervalDivider)
+                        timerinterv *= 1000;
                 }
                 catch
                 {
@@ -427,6 +431,29 @@ namespace Autoclickerro
         private void btnStop_Click(object sender, EventArgs e)
         {
             stop();
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            int temp = int.Parse(intervalText.Text);
+            if (trackBar1.Value == 0)
+            {
+                temp *= 1000;
+                intervalDivider = false;
+            }
+            else if (trackBar1.Value == 1)
+            {
+                if ((temp / 1000) > 0)
+                    temp /= 1000;
+                else
+                {
+                    temp = 1;
+                }
+
+                intervalDivider = true;
+            }
+
+            intervalText.Text = temp.ToString();
         }
     }
 }
